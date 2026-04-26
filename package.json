@@ -1,0 +1,13 @@
+{
+  "name": "marketory-theme",
+  "version": "1.0.0",
+  "description": "Marketory WordPress theme build scripts",
+  "private": true,
+  "scripts": {
+    "dev":   "sass --watch assets/scss/main.scss:assets/css/main.css --style=expanded",
+    "build": "sass assets/scss/main.scss:assets/css/main.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
