@@ -27,3 +27,13 @@
   --dur:  200ms;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (min-width: 1280px) {
+  :root {
+    --col-toc:  192px;
+    --col-side: 192px;
+    --col-gap:  96px;
+    --max-w:    1440px;
+    --pad-x:    64px;
+  }
+}

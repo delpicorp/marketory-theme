@@ -22,14 +22,12 @@ $tags        = get_the_tags($post_id);
   <!-- BREADCRUMB -->
   <nav class="breadcrumb container" aria-label="<?php esc_attr_e('경로 탐색', 'marketory'); ?>">
     <a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('홈', 'marketory'); ?></a>
-    <span aria-hidden="true"> / </span>
     <?php if ($primary_cat) : ?>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
       <a href="<?php echo esc_url(get_category_link($primary_cat->term_id)); ?>">
         <?php echo esc_html($primary_cat->name); ?>
       </a>
-      <span aria-hidden="true"> / </span>
     <?php endif; ?>
-    <span aria-current="page"><?php the_title(); ?></span>
   </nav>
 
   <!-- POST HEADER -->
