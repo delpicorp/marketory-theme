@@ -155,6 +155,8 @@ a:hover { color: var(--c-accent-h); text-decoration: underline; }
     border-left: 2px solid var(--c-border);
     color: var(--c-text-2);
     line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-all;
     transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 
     &:hover { color: var(--c-accent); text-decoration: none; }
