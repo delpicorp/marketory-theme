@@ -176,6 +176,7 @@ a:hover {
   color: var(--c-text-2);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -188,23 +189,26 @@ a:hover {
   grid-template-columns: var(--col-toc) 1fr var(--col-side);
   grid-template-areas: "toc main sidebar";
   gap: var(--col-gap);
-  align-items: start;
   padding-bottom: 48px;
 }
 
 .col-toc {
   grid-area: toc;
   min-width: 0;
+  align-self: stretch;
 }
 
 .col-main {
   grid-area: main;
   min-width: 0;
+  align-self: start;
+  overflow-wrap: break-word;
 }
 
 .col-sidebar {
   grid-area: sidebar;
   min-width: 0;
+  align-self: stretch;
 }
 
 .toc-sticky {
@@ -240,9 +244,6 @@ a:hover {
   color: var(--c-accent);
   border-left-color: var(--c-accent);
   font-weight: 500;
-}
-.toc-nav .toc-h3 {
-  padding-left: 24px;
 }
 
 .summary-box {

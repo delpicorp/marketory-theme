@@ -7,7 +7,7 @@
     var nav     = document.getElementById('toc-nav');
     if (!content || !nav) return;
 
-    var headings = content.querySelectorAll('h2, h3');
+    var headings = content.querySelectorAll('h2');
     if (headings.length < 2) {
       var wrap = nav.closest('.toc-sticky');
       if (wrap) wrap.style.display = 'none';
@@ -20,7 +20,6 @@
       var a       = document.createElement('a');
       a.href      = '#' + h.id;
       a.textContent = h.textContent;
-      if (h.tagName === 'H3') a.className = 'toc-h3';
       a.addEventListener('click', function (e) {
         e.preventDefault();
         h.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -45,7 +44,7 @@
       });
     }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
 
-    document.querySelectorAll('#post-content h2, #post-content h3').forEach(function (h) {
+    document.querySelectorAll('#post-content h2').forEach(function (h) {
       observer.observe(h);
     });
   }

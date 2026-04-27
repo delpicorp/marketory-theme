@@ -88,6 +88,8 @@ $tags        = get_the_tags($post_id);
           <?php endforeach; ?>
         </div>
       <?php endif; ?>
+
+      <?php get_template_part('template-parts/author-box'); ?>
     </div>
 
     <!-- RIGHT: SIDEBAR (desktop only, hidden on mobile) -->
@@ -106,11 +108,6 @@ $tags        = get_the_tags($post_id);
   <!-- SHARE (mobile only, outside grid so it follows col-main then col-toc) -->
   <div class="share-mobile container">
     <?php get_template_part('template-parts/share'); ?>
-  </div>
-
-  <!-- AUTHOR BOX -->
-  <div class="container">
-    <?php get_template_part('template-parts/author-box'); ?>
   </div>
 
   <!-- RELATED POSTS -->
