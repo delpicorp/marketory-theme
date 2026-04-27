@@ -12,6 +12,7 @@ body {
   color: var(--c-text);
   background: var(--c-bg);
   -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
 }
 
 a { color: var(--c-accent); text-decoration: none; }
@@ -129,9 +130,9 @@ a:hover { color: var(--c-accent-h); text-decoration: underline; }
   padding-bottom: 48px;
 }
 
-.col-toc     { grid-area: toc;     min-width: 0; align-self: stretch; }
+.col-toc     { grid-area: toc;     min-width: 0; align-self: stretch; padding-top: 32px; padding-bottom: 160px; }
 .col-main    { grid-area: main;    min-width: 0; align-self: start; overflow-wrap: break-word; }
-.col-sidebar { grid-area: sidebar; min-width: 0; align-self: stretch; }
+.col-sidebar { grid-area: sidebar; min-width: 0; align-self: stretch; padding-top: 32px; padding-bottom: 160px; }
 
 // ── TOC ────────────────────────────────────────────────────────────────────
 .toc-sticky { position: sticky; top: 24px; }

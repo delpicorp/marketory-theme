@@ -23,10 +23,8 @@ function marketory_reading_time(int $post_id = 0): int {
     $post_id = $post_id ?: (int) get_the_ID();
     $content = (string) get_post_field('post_content', $post_id);
     $text    = wp_strip_all_tags($content);
-    // Korean chars / 500 + English words / 200, minimum 1 minute
-    $chars = mb_strlen((string) preg_replace('/[a-zA-Z0-9\s]/', '', $text));
-    $words = str_word_count($text);
-    return max(1, (int) ceil($chars / 500 + $words / 200));
+    $text    = (string) preg_replace('/\s+/', '', $text);
+    return max(1, (int) ceil(mb_strlen($text) / 500));
 }
 
 add_action('wp_head', function (): void {
