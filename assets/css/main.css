@@ -194,14 +194,17 @@ a:hover {
 
 .col-toc {
   grid-area: toc;
+  min-width: 0;
 }
 
 .col-main {
   grid-area: main;
+  min-width: 0;
 }
 
 .col-sidebar {
   grid-area: sidebar;
+  min-width: 0;
 }
 
 .toc-sticky {

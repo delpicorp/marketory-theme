@@ -129,9 +129,9 @@ a:hover { color: var(--c-accent-h); text-decoration: underline; }
   padding-bottom: 48px;
 }
 
-.col-toc     { grid-area: toc; }
-.col-main    { grid-area: main; }
-.col-sidebar { grid-area: sidebar; }
+.col-toc     { grid-area: toc; min-width: 0; }
+.col-main    { grid-area: main; min-width: 0; }
+.col-sidebar { grid-area: sidebar; min-width: 0; }
 
 // ── TOC ────────────────────────────────────────────────────────────────────
 .toc-sticky { position: sticky; top: 24px; }
